@@ -383,16 +383,14 @@ Hosted on:
 
 ### Muqtadir Khan
 
-Master of Computer Applications (MCA)
-
 GitHub:
 https://github.com/muqtadirkhxn
 
 LinkedIn:
-(Add your LinkedIn URL)
+https://www.linkedin.com/in/muqtadirkhxn/
 
 Portfolio:
-(Add your Portfolio URL)
+(coming soon)
 
 ---
 
