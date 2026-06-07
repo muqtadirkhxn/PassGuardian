@@ -104,6 +104,14 @@ This project demonstrates modern full-stack web development practices including 
 ```bash
 PassGuardian/
 │
+├── screenshots/
+│   ├── login.png
+│   ├── register.png
+│   ├── dashboard.png
+│   ├── add-password.png
+│   ├── password-generator.png
+│   └── edit-password.png
+│
 ├── backend/
 │   ├── middleware/
 │   ├── models/
@@ -115,16 +123,12 @@ PassGuardian/
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   └── App.js
-│   │
 │   ├── package.json
 │   └── vercel.json
 │
-└── README.md
+├── README.md
+├── DEPLOY.md
+└── .gitignore
 ```
 
 ---
