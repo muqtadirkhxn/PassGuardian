@@ -1,231 +1,399 @@
 # 🔐 PassGuardian
 
-A secure full-stack password manager built with React.js, Node.js, Express.js, and MongoDB Atlas. PassGuardian helps users securely store, organize, generate, and manage passwords through encrypted credential storage, JWT-based authentication, and a responsive user-friendly dashboard.
+<div align="center">
 
-## 🚀 Overview
+![PassGuardian](./frontend/public/preview.png)
 
-PassGuardian is a personal full-stack web application designed and developed independently to provide secure password management with modern authentication and encryption techniques. The application allows users to create accounts, securely store website credentials, organize passwords by category, generate strong passwords, and access their vault through an intuitive dashboard interface.
+### Secure Password Manager Built with React, Node.js, Express & MongoDB
 
-## 🌐 Live Demo
+Store, manage, generate, and organize your passwords securely with encrypted credential storage, JWT authentication, and a modern responsive dashboard.
 
-Frontend: Coming Soon
+**Live Demo:** https://passguardian.vercel.app
 
-Backend API: Coming Soon
+**Backend API:** https://passguardian-api.onrender.com
 
-## ✨ Features
+</div>
 
-### Authentication & Security
+---
 
-- JWT-based user authentication
-- Secure user registration and login
-- bcrypt password hashing with salt rounds
-- Protected API routes
-- Session persistence
-- AES-encrypted credential storage
+## 📌 Overview
 
-### Password Management
+PassGuardian is a full-stack password management application designed to securely store and manage user credentials. The application provides user authentication, encrypted password storage, password generation, category-based organization, and a clean dashboard interface.
 
-- Create, read, update, and delete password entries
-- Store website credentials securely
-- Password visibility toggle
-- Copy username and password to clipboard
-- Category-based organization
-- Real-time search and filtering
+This project demonstrates modern full-stack web development practices including authentication, authorization, database management, API development, encryption, and cloud deployment.
 
-### User Experience
+---
 
-- Responsive desktop and mobile interface
-- Sidebar navigation with active states
-- Dashboard statistics overview
-- Password strength indicator
-- Built-in password generator
-- Toast notifications and user feedback
+# ✨ Features
 
-## 🛠️ Tech Stack
+### 🔐 Authentication & Security
 
-| Layer          | Technologies                         |
-| -------------- | ------------------------------------ |
-| Frontend       | React.js 18, React Router DOM, Axios |
-| Backend        | Node.js, Express.js                  |
-| Database       | MongoDB Atlas                        |
-| Authentication | JWT, bcryptjs                        |
-| Encryption     | CryptoJS AES Encryption              |
-| Notifications  | React Toastify                       |
-| Icons          | Lucide React                         |
-| Deployment     | Vercel, Render                       |
+- User Registration
+- User Login
+- JWT Authentication
+- Protected Routes
+- Password Hashing using bcrypt
+- Secure Token Verification
+- Encrypted Password Storage
+- Environment Variable Protection
 
-## 📁 Project Structure
+### 🔑 Password Management
 
-passguardian/
-├── backend/
-│ ├── middleware/
-│ ├── models/
-│ ├── routes/
-│ ├── utils/
-│ └── server.js
+- Add New Passwords
+- Edit Existing Passwords
+- Delete Passwords
+- Show / Hide Password
+- Copy Username
+- Copy Password
+- Password Generator
+- Password Strength Indicator
+- Category Management
+
+### 📊 Dashboard
+
+- Total Password Statistics
+- Category Statistics
+- Recent Passwords Overview
+- Responsive Dashboard Layout
+- User Profile Section
+
+### 🎨 User Experience
+
+- Modern UI Design
+- Fully Responsive Layout
+- Toast Notifications
+- Loading States
+- Smooth User Flow
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- React.js
+- React Router DOM
+- Axios
+- React Icons
+- React Toastify
+- CSS3
+
+## Backend
+
+- Node.js
+- Express.js
+- JWT Authentication
+- bcryptjs
+- Crypto (AES Encryption)
+
+## Database
+
+- MongoDB Atlas
+- Mongoose
+
+## Deployment
+
+- Vercel (Frontend)
+- Render (Backend)
+- MongoDB Atlas (Database)
+
+---
+
+# 📂 Project Structure
+
+```bash
+PassGuardian/
 │
-└── frontend/
-├── public/
-├── src/
-│ ├── components/
-│ ├── context/
-│ ├── pages/
-│ └── App.js
+├── backend/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── App.js
+│   │
+│   ├── package.json
+│   └── vercel.json
+│
+└── README.md
+```
 
-## 🔒 Security Features
+---
 
-- bcrypt password hashing for user authentication
-- AES-encrypted password storage
-- JWT-based authorization
-- Protected API endpoints
-- Environment variable configuration
-- CORS protection
-- Input validation and error handling
+# 🔒 Security Implementation
 
-## 📊 Core Functionality
+## Password Hashing
 
-### User Authentication
+User account passwords are hashed using:
 
-- Register new account
-- Secure login
-- Persistent sessions
-- Logout functionality
+```javascript
+bcryptjs;
+```
 
-### Password Vault
+before storing in MongoDB.
 
-- Add credentials
-- View stored passwords
-- Edit password entries
-- Delete password entries
-- Organize by categories
+---
 
-### Dashboard
+## JWT Authentication
 
-- Password statistics
-- Category breakdown
-- Recent entries overview
+Protected API routes use:
 
-## ⚙️ Local Development Setup
+```javascript
+jsonwebtoken;
+```
 
-### Prerequisites
+for authentication and authorization.
 
-- Node.js 18+
-- MongoDB Atlas or Local MongoDB
+---
 
-### Backend Setup
+## Password Encryption
+
+Stored credentials are encrypted before being saved to the database.
+
+Sensitive password data is never stored in plain text.
+
+---
+
+## Environment Variables
+
+Secrets are stored securely using:
+
+```env
+MONGODB_URI=
+JWT_SECRET=
+ENCRYPTION_KEY=
+FRONTEND_URL=
+```
+
+and are never committed to GitHub.
+
+---
+
+# 📸 Application Screenshots
+
+## Login Page
+
+Add screenshot:
+
+```text
+screenshots/login.png
+```
+
+```md
+![Login Page](./screenshots/login.png)
+```
+
+---
+
+## Register Page
+
+```md
+![Register Page](./screenshots/register.png)
+```
+
+---
+
+## Dashboard
+
+```md
+![Dashboard](./screenshots/dashboard.png)
+```
+
+---
+
+## Add Password
+
+```md
+![Add Password](./screenshots/add-password.png)
+```
+
+---
+
+## Edit Password
+
+```md
+![Edit Password](./screenshots/edit-password.png)
+```
+
+---
+
+# ⚙️ Installation Guide
+
+## Clone Repository
+
+```bash
+git clone https://github.com/muqtadirkhxn/PassGuardian.git
+```
+
+```bash
+cd PassGuardian
+```
+
+---
+
+# Backend Setup
 
 ```bash
 cd backend
 npm install
 ```
 
-Create `.env`
+Create:
+
+```env
+.env
+```
 
 ```env
 PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-ENCRYPTION_KEY=your_encryption_key
-JWT_EXPIRE=7d
 NODE_ENV=development
+
+MONGODB_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+JWT_EXPIRE=7d
+
+ENCRYPTION_KEY=your_encryption_key
+
 FRONTEND_URL=http://localhost:3000
 ```
 
-Start Backend
+Run Backend:
 
 ```bash
 npm run dev
 ```
 
-### Frontend Setup
+---
+
+# Frontend Setup
 
 ```bash
 cd frontend
 npm install
 ```
 
-Create `.env`
+Create:
+
+```env
+.env
+```
 
 ```env
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
-Start Frontend
+Run Frontend:
 
 ```bash
 npm start
 ```
 
-Application URL:
+---
+
+# 🌐 Deployment
+
+## Frontend
+
+Deployed on:
+
+**Vercel**
 
 ```text
-http://localhost:3000
+https://passguardian.vercel.app
 ```
 
-## 🚀 Deployment
+---
 
-### Frontend
+## Backend
 
-- Vercel
+Deployed on:
 
-### Backend
+**Render**
 
-- Render
+```text
+https://passguardian-api.onrender.com
+```
 
-### Database
+---
 
-- MongoDB Atlas
+## Database
 
-## 📡 API Endpoints
+Hosted on:
+
+**MongoDB Atlas**
+
+---
+
+# 🧪 Testing Checklist
 
 ### Authentication
 
-POST /api/auth/register
+- [x] Register User
+- [x] Login User
+- [x] Logout User
+- [x] Protected Routes
 
-POST /api/auth/login
+### Password Management
 
-GET /api/auth/me
+- [x] Create Password
+- [x] Update Password
+- [x] Delete Password
+- [x] View Password
+- [x] Copy Password
 
-### Passwords
+### Deployment
 
-GET /api/passwords
+- [x] Frontend Deployment
+- [x] Backend Deployment
+- [x] Database Connection
+- [x] Production Environment Variables
 
-POST /api/passwords
+---
 
-PUT /api/passwords/:id
+# 🚀 Future Improvements
 
-DELETE /api/passwords/:id
+- Dark Mode
+- Search Passwords
+- Advanced Filtering
+- Password Export
+- Password Import
+- Two-Factor Authentication (2FA)
+- Password Breach Detection
+- Password Sharing
+- Activity Logs
 
-GET /api/passwords/stats/overview
+---
 
-## 🎯 Key Highlights
+# 👨‍💻 Author
 
-- Full-Stack Application Development
-- JWT Authentication System
-- Password Encryption & Security
-- MongoDB Atlas Integration
-- RESTful API Design
-- Responsive UI Development
-- CRUD Operations
-- Production Deployment Ready
+### Muqtadir Khan
 
-## 📚 What I Learned
+Master of Computer Applications (MCA)
 
-- Authentication and Authorization
-- Password Hashing with bcrypt
-- Encryption and Secure Data Handling
-- REST API Development
-- MongoDB Atlas Integration
-- React State Management
-- Environment Variable Management
-- Cloud Deployment Workflows
+GitHub:
+https://github.com/muqtadirkhxn
 
-## 📄 License
+LinkedIn:
+(Add your LinkedIn URL)
 
-MIT License
+Portfolio:
+(Add your Portfolio URL)
 
-## 👨‍💻 Author
+---
 
-Muqtadir Khan
+# 📄 License
 
-Personal Full-Stack Development Project
+This project is created for educational, learning, and portfolio purposes.
+
+© 2026 Muqtadir Khan. All Rights Reserved.
